@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="C++">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Shared Server &mdash; Aninfo 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Aninfo 1.0.0 documentation" href="index.html" />
+    <link rel="prev" title="Welcome to Grupo 3’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="shared-server">
+<h1>Shared Server<a class="headerlink" href="#shared-server" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tecnologias-utilizadas">
+<h2><strong>Tecnologías utilizadas:</strong><a class="headerlink" href="#tecnologias-utilizadas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tecnologias-para-front-end">
+<h3>Tecnologías para Front-end:<a class="headerlink" href="#tecnologias-para-front-end" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>Angular JS</dt>
+<dd><ul class="first">
+<li><p class="first">Angular es un framework ampliamente utilizado entre los desarrolladores debido a la facilidad que ofrece para aplicar MVC de forma clara y eficiente.</p>
+</li>
+<li><p class="first">Una gran ventaja que tiene Angular es que los objetos son Javascript puro, lo que hace que la integración con los objetos que provee la api de node sea automática.</p>
+</li>
+<li><p class="first">Decidimos utilizar angular y no jQuery + Bootstrap porque nos permite tener código html mucho más &#8220;limpio&#8221;. Además permite tener un poco de lógica, pero separado de la vista.</p>
+</li>
+<li><p class="first">Un ejemplo del código para ver la limpieza que otorga es el siguiente:</p>
+</li>
+<li><div class="first highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">&lt;</span><span class="n">li</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;list-item&quot;</span> <span class="n">ng</span><span class="o">-</span><span class="n">repeat</span><span class="o">=</span><span class="s2">&quot;item in users&quot;</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p class="last">Con esa sentencia lo que estoy indicando es que yo desde el controller creo la lista &#8220;users&#8221; y después el explorador por cada elemento que haya en la lista va a generar el código correspondiente (en este caso un item de una lista).</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Node JS</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="estructura-de-la-base-de-datos">
+<h2><strong>Estructura de la Base de datos:</strong><a class="headerlink" href="#estructura-de-la-base-de-datos" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="18%" />
+<col width="23%" />
+<col width="41%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Tabla</strong></td>
+<td><strong>Columna</strong></td>
+<td><strong>Tipo de dato</strong></td>
+<td><strong>Máxima cantidad de caracteres</strong></td>
+</tr>
+<tr class="row-even"><td>Userprofile</td>
+<td>Sex</td>
+<td>Character</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Userprofile</td>
+<td>Alias</td>
+<td>Character varying</td>
+<td>50</td>
+</tr>
+<tr class="row-even"><td>Userprofile</td>
+<td>Email</td>
+<td>Character</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Userprofile</td>
+<td>Name</td>
+<td>Character</td>
+<td>200</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>IdUser</td>
+<td>Integer</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Location</td>
+<td>Latitude</td>
+<td>Numeric</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>Longitude</td>
+<td>Numeric</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Interest</td>
+<td>Id</td>
+<td>Integer</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Interest</td>
+<td>Category</td>
+<td>Character varying</td>
+<td>100</td>
+</tr>
+<tr class="row-odd"><td>Interest</td>
+<td>Value</td>
+<td>Character varying</td>
+<td>100</td>
+</tr>
+<tr class="row-even"><td>UserInterest</td>
+<td>IdUser</td>
+<td>Integer</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>UserInterest</td>
+<td>IdInterest</td>
+<td>Integer</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Shared Server</a><ul>
+<li><a class="reference internal" href="#tecnologias-utilizadas"><strong>Tecnologías utilizadas:</strong></a><ul>
+<li><a class="reference internal" href="#tecnologias-para-front-end">Tecnologías para Front-end:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#estructura-de-la-base-de-datos"><strong>Estructura de la Base de datos:</strong></a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Grupo 3&#8217;s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/shared.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Jmoguilevsky.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5a0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/shared.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
