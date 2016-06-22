@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="C++">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Android Application &mdash; Aninfo 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Aninfo 1.0.0 documentation" href="index.html" />
+    <link rel="prev" title="Application Server" href="appServer.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="android-application">
+<h1>Android Application<a class="headerlink" href="#android-application" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tecnologias-utilizadas">
+<h2><strong>Tecnologías utilizadas:</strong><a class="headerlink" href="#tecnologias-utilizadas" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>Volley</dt>
+<dd><ul class="first last simple">
+<li>Volley es una biblioteca de HTTP que hace más fácil y más rápido el manejo de requests para aplicaciones de Android.</li>
+<li>Utilizamos Volley para el manejo de los requests entre el Android y el Application Server.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>SQLite</dt>
+<dd><ul class="first last simple">
+<li>SQLite es una base de datos muy simple que se maneja con un archivo físico pero permite realizar transacciones sobre el mismo.</li>
+<li>Utilizamos SQLite para guardar información del usuario, dado que se crea rápido y es fácil para utilizar y trae todas las ventajas que de tener los datos guardados en forma de DB.</li>
+<li>En la DB solo tenemos guardado los datos del usuario logueado, cuando se loguea se lo guarda y cuando se desloguea se elimina su información.</li>
+<li>La estructura es muy simple con una única tabla con los siguientes campos:</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="59%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Campo</strong></td>
+<td><strong>Tipo de Dato</strong></td>
+</tr>
+<tr class="row-even"><td>ID</td>
+<td>Integer (Primary key)</td>
+</tr>
+<tr class="row-odd"><td>Alias</td>
+<td>Text</td>
+</tr>
+<tr class="row-even"><td>Email</td>
+<td>Text Unique</td>
+</tr>
+<tr class="row-odd"><td>Name</td>
+<td>Text</td>
+</tr>
+<tr class="row-even"><td>Gender</td>
+<td>Text</td>
+</tr>
+<tr class="row-odd"><td>Interests</td>
+<td>Text</td>
+</tr>
+<tr class="row-even"><td>Photo</td>
+<td>Text</td>
+</tr>
+<tr class="row-odd"><td>Location</td>
+<td>Text</td>
+</tr>
+<tr class="row-even"><td>Token</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Android Application</a><ul>
+<li><a class="reference internal" href="#tecnologias-utilizadas"><strong>Tecnologías utilizadas:</strong></a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="appServer.html" title="previous chapter">Application Server</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/android.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Jmoguilevsky.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5a0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/android.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

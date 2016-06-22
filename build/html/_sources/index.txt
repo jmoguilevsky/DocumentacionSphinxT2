@@ -3,12 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Grupo 3's documentation!
-==================================
+Bienvenido a la documentación del Grupo 3!
+==========================================
 
-Contents:
+Contenidos:
 
 .. toctree::
    :maxdepth: 2
    
    shared
+   appServer
+   android
